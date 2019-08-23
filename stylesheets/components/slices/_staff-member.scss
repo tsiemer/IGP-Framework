@@ -1,0 +1,36 @@
+.staff{
+    display:flex;
+    flex-wrap:wrap;
+    flex-direction:row;
+    margin:50px;
+
+}
+
+.staff_member{
+    flex:1;
+    text-align:center;
+    box-shadow:5px 5px 5px #f9f9f9;
+    margin:10px;
+    padding:30px;
+
+    .staff_member-image{
+        background-size:cover;
+        background-repeat:no-repeat;
+        margin:0px auto;
+        width:150px;
+        height:150px;
+        border-radius:50%;
+    }
+
+    h2{
+        font-size:20px;
+        padding:0px;
+        margin:0px;
+    }
+    
+    h3{
+        font-size:15px;
+        padding:0px;
+        margin:20px 0px 0px 0px;
+    }
+}

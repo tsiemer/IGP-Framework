@@ -1,0 +1,122 @@
+{
+  "Page" : {
+    "uid" : {
+      "type" : "UID",
+      "config" : {
+        "label" : "UID",
+        "placeholder" : "unique-identifier-for-blog-post-url"
+      }
+    },
+    "title" : {
+      "type" : "StructuredText",
+      "config" : {
+        "single" : "heading1",
+        "label" : "Title",
+        "placeholder" : "Blog Post Title..."
+      }
+    },
+    "date" : {
+      "type" : "Date",
+      "config" : {
+        "label" : "Date"
+      }
+    },
+    "body" : {
+      "type" : "Slices",
+      "fieldset" : "Slice zone",
+      "config" : {
+        "choices" : {
+          "blade" : {
+            "type" : "Slice",
+            "fieldset" : "Blade",
+            "description" : "a fun diagonal section",
+            "icon" : "picture_in_picture_alt",
+            "display" : "list",
+            "non-repeat" : {
+              "section_title" : {
+                "type" : "StructuredText",
+                "config" : {
+                  "single" : "heading2",
+                  "label" : "Section Title",
+                  "placeholder" : "Section Title"
+                }
+              },
+              "subtitle" : {
+                "type" : "StructuredText",
+                "config" : {
+                  "single" : "heading3",
+                  "label" : "Subtitle",
+                  "placeholder" : "Subtitle"
+                }
+              },
+              "content" : {
+                "type" : "StructuredText",
+                "config" : {
+                  "multi" : "paragraph, preformatted, strong, em, hyperlink, image, embed, list-item, o-list-item, o-list-item",
+                  "label" : "Content",
+                  "placeholder" : "Content"
+                }
+              },
+              "button_color" : {
+                "type" : "Color",
+                "config" : {
+                  "label" : "Button Color"
+                }
+              },
+              "cta_button" : {
+                "type" : "Link",
+                "config" : {
+                  "label" : "CTA Button",
+                  "placeholder" : "CTA Button"
+                }
+              },
+              "image_side" : {
+                "type" : "Select",
+                "config" : {
+                  "options" : [ "left", "right" ],
+                  "label" : "Image Side",
+                  "placeholder" : "Image Side"
+                }
+              },
+              "cta_button_text" : {
+                "type" : "StructuredText",
+                "config" : {
+                  "multi" : "paragraph",
+                  "label" : "Cta Button Text",
+                  "placeholder" : "CTA Button - Text"
+                }
+              },
+              "cta_button_color" : {
+                "type" : "Select",
+                "config" : {
+                  "options" : [ "blue", "green", "orange", "red", "purple", "navy green" ],
+                  "default_value" : "blue",
+                  "label" : "CTA Button Color",
+                  "placeholder" : "CTA Button - Background Color"
+                }
+              },
+              "blade_background_color" : {
+                "type" : "Select",
+                "config" : {
+                  "options" : [ "white", "blue", "green", "purple", "orange", "navy green", "red" ],
+                  "default_value" : "white",
+                  "label" : "Blade Background Color",
+                  "placeholder" : "Blade Background Color"
+                }
+              },
+              "featured_image" : {
+                "type" : "Image",
+                "config" : {
+                  "constraint" : { },
+                  "thumbnails" : [ ],
+                  "label" : "Featured Image"
+                }
+              }
+            },
+            "repeat" : { }
+          }
+        }
+      }
+    }
+  }
+}

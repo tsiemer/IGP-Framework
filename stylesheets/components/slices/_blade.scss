@@ -1,0 +1,226 @@
+@import '../../_variables';
+
+.blade{
+    width:100%;
+    height:auto;
+    padding: 100px 100px;
+    margin:0px;
+    
+    display:flex;
+    flex-direction:row;
+    justify-content: center;
+    align-items:center;
+
+    &.orange{
+        background-color: $primary_orange;
+    }
+    
+    &.red{
+        background-color: $primary_red;
+    }
+
+    &.purple{
+        background-color: $primary_purple;
+    }
+
+    &.green{
+        background-color: $primary_green;
+        color:white;
+    }
+    
+    &.navygreen{
+        background-color: $primary_navy;
+        color:white;
+    }
+    
+    &.white{
+        background-color: $primary_white;
+        color:white;
+    }
+    
+    &.blue{
+        background-color: $primary_blue;
+        color:white;
+    }
+
+    .featured_image{
+        width:200px;
+        flex:1;
+    }
+
+    .content_container{
+        padding:40px;
+        flex:3;
+
+        h3{
+            font-size:20px;
+            font-weight:bold;
+        }
+
+        h2{
+            color:$blade_header_color;
+            font-size:40px;
+            font-weight:bold;
+        }
+        
+        p{
+            color: $blade_content_color;
+            font-size:16px;
+            font-weight:lighter;
+        }
+    }
+}
+
+.skew-cc{
+    width:100%;
+    height:100px;
+    position:absolute;
+    left:0px;
+    // background: linear-gradient(to right bottom, #823A9C 49%, #fff 50%),    linear-gradient(-50deg, transparent 16px, #000 0);
+
+    &.orange{
+        background: linear-gradient(to right bottom, $primary_orange 49%, transparent 50%),    linear-gradient(-50deg, transparent 16px, transparent 0);
+    }
+    
+    &.red{
+        background: linear-gradient(to right bottom, $primary_red 49%, transparent 50%),    linear-gradient(-50deg, transparent 16px, transparent 0);
+    }
+    
+    &.purple{
+        background: linear-gradient(to right bottom, $primary_purple 49%, transparent 50%),    linear-gradient(-50deg, transparent 16px, transparent 0);
+    }
+    
+    &.green{
+        background: linear-gradient(to right bottom, $primary_green 49%, transparent 50%),    linear-gradient(-50deg, transparent 16px, transparent 0);
+        color:white;
+    }
+    
+    &.navygreen{
+        background: linear-gradient(to right bottom, $primary_navy 49%, transparent 50%),    linear-gradient(-50deg, transparent 16px, transparent 0);
+        color:white;
+    }
+    
+    &.white{
+        background: linear-gradient(to right bottom, $primary_white 49%, transparent 50%),    linear-gradient(-50deg, transparent 16px, transparent 0);
+        color:white;
+    }
+    
+    &.blue{
+        background: linear-gradient(to right bottom, $primary_blue 49%, transparent 50%),    linear-gradient(-50deg, transparent 16px, transparent 0);
+        color:white;
+    }
+}
+
+.skew-c{
+    // margin:50px 0px;
+    width:100%;
+    height:100px;
+    position:absolute;
+    left:0px;
+    // background: linear-gradient(to right bottom, #823A9C 49%, #fff 50%),    linear-gradient(-50deg, transparent 16px, #000 0);
+
+    &.orange{
+        background: linear-gradient(to right bottom, transparent 49%, $primary_orange 50%),    linear-gradient(-50deg, transparent 16px, transparent 0);
+    }
+    
+    &.red{
+        background: linear-gradient(to right bottom, transparent 49%, $primary_red 50%),    linear-gradient(-50deg, transparent 16px, transparent 0);
+    }
+    
+    &.purple{
+        background: linear-gradient(to right bottom, transparent 49%, $primary_purple 50%),    linear-gradient(-50deg, transparent 16px, transparent 0);
+    }
+    
+    &.green{
+        background: linear-gradient(to right bottom, transparent 49%, $primary_green 50%),    linear-gradient(-50deg, transparent 16px, transparent 0);
+        color:white;
+    }
+    
+    &.navygreen{
+        background: linear-gradient(to right bottom, transparent 49%, $primary_navy 50%),    linear-gradient(-50deg, transparent 16px, transparent 0);
+        color:white;
+    }
+    
+    &.white{
+        background: linear-gradient(to right bottom, transparent 49%, $primary_white 50%),    linear-gradient(-50deg, transparent 16px, transparent 0);
+        color:white;
+    }
+    
+    &.blue{
+        background: linear-gradient(to right bottom, transparent 49%, $primary_blue 50%),    linear-gradient(-50deg, transparent 16px, transparent 0);
+        color:white;
+    }
+}
+
+
+
+.cta_button {
+    color:white;
+    padding:10px 20px;
+    border-radius:20px;
+
+    &.orange{
+        background-color: $primary_orange;
+        color:white;
+    }
+    
+    &.red{
+        background-color: $primary_red;
+        color:white;
+    }
+
+    &.purple{
+        background-color: $primary_purple;
+        color:white;
+    }
+
+    &.green{
+        background-color: $primary_green;
+        color:white;
+    }
+    
+    &.navygreen{
+        background-color: $primary_navy;
+        color:white;
+    }
+    
+    &.white{
+        background-color: $primary_white;
+        color:black;
+    }
+    
+    &.blue{
+        background-color: $primary_blue;
+        color:white;
+    }
+}
+
+.subtitle {
+    &.orange{
+        color:$primary_orange;
+    }
+    
+    &.red{
+        color:$primary_red;
+    }
+
+    &.purple{
+        color:$primary_purple;
+    }
+
+    &.green{
+        color: $primary_green;
+    }
+    
+    &.navygreen{
+        color:$primary_navy;
+    }
+    
+    &.white{
+        color:black;
+    }
+    
+    &.blue{
+        color:$primary_blue;
+    }
+}
