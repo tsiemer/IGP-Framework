@@ -2,16 +2,40 @@ import React, { Fragment } from 'react'
 import { StaticQuery, graphql } from 'gatsby'
 import { Helmet } from 'react-helmet'
 import Footer from './Footer'
+import Navigation from './Navigation'
 import '../../stylesheets/main.scss'
+
+
 
 export default props => (
   <StaticQuery
     query={graphql`
-      query SiteQuery {
-        site {
-          siteMetadata {
-            title
-            description
+      {
+        prismic {
+          allNavigations{
+             edges{
+              node{
+                display_name
+                logo
+                nav{
+                  ... on PRISMIC_NavigationNavNav_item {
+                    label
+                    primary{
+                      link{
+                        _linkType
+                      }
+                      label
+                    }
+                    fields{
+                      sub_nav_link{
+                        _linkType
+                      }
+                      sub_nav_link_label
+                    }
+                  }
+                }
+              }
+            }
           }
         }
       }
@@ -21,24 +45,20 @@ export default props => (
 )
 
 const Layout = ( props ) => {
-  // Define the meta title and description
-  const title = props.data.site.siteMetadata.title
-  const description = props.data.site.siteMetadata.description
-
-  // Load the Prismic edit button
   if(typeof window !== 'undefined' && window.prismic) {
     window.prismic.setupEditButton()
   }
+
+  console.log("This is the navigation props and data:", props.data)
 
 	return(
     <Fragment>
       <Helmet>
         <meta charSet="utf-8" />
-        <title>{ title }</title>
-        <meta name="description" content={ description } />
         <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900" rel="stylesheet" type="text/css"></link>
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"></link>
       </Helmet>
+      <Navigation data={props.data.prismic.allNavigations}></Navigation>
       <main>
         { props.children }
       </main>
