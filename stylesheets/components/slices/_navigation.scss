@@ -1,0 +1,40 @@
+.Navigation{
+    position:fixed;
+    background-color:#333;
+    color:white;
+    display:flex;
+    
+    top:0px;
+    width:100vw;
+    height:80px;
+    padding:20px;
+    z-index:99;
+
+
+    .navbar{
+        display:flex;
+        width:100vw;
+
+        ul{
+            display:flex;
+            list-style-type:none;
+            justify-content: flex-start;
+    
+            li{
+                a{
+                    color:white;
+                }
+            }
+        }
+    
+        .navbar-brand{
+            flex:1;
+            color:white;
+            font-size:20px;
+            font-weight:bold;
+            text-transform:uppercase;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+    }
+
+}

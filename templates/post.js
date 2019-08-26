@@ -86,9 +86,6 @@ const PostBody = ({ blogPost }) => {
   return (
     <div>
       <div className="container post-header">
-        <div className="back">
-          <Link to="/">back to list</Link>
-        </div>
         {/* Render the edit button */}
         <h1 data-wio-id={ blogPost._meta.id }>
           { titled ? RichText.asText(blogPost.title) : 'Untitled' }

@@ -2,7 +2,7 @@ import React from 'react'
 import { graphql, Link } from 'gatsby'
 import { RichText } from 'prismic-reactjs'
 import Layout from '../components/layouts' 
-import { Blade, Text, StaffMember, Carousel } from '../components/slices'
+import { Blade, Text, StaffMember, Carousel, Quote } from '../components/slices'
 
 // Query for the Page content in Prismic
 export const query = graphql`
@@ -65,6 +65,17 @@ query PageQuery($uid: String) {
                 bio
               }
             }
+
+            ... on PRISMIC_PageBodyQuote {
+              type
+              label
+
+              primary{
+                quote
+                portrait_author
+                name_of_the_author
+              }
+            }
           }
         }
       }
@@ -96,6 +107,12 @@ const PageSlices = ({ slices }) => {
           </div>
         )
 
+        case 'quote' : return (
+          <div key={ index }>
+            { <Quote slice={ slice } /> }
+          </div>
+        )
+
         case 'carousel' : return (
           <div key={ index }>
             { <Carousel slice={ slice } /> }
@@ -116,10 +133,6 @@ const PageBody = ({ page }) => {
   return (
     <div>
       <div className="container post-header">
-        <div className="back">
-          <Link to="/">back to list</Link>
-        </div>
-        {/* Render the edit button */}
         <h1 data-wio-id={ page._meta.id }>
           { titled ? RichText.asText(page.title) : 'Untitled' }
         </h1>
