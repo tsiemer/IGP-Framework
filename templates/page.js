@@ -2,7 +2,7 @@ import React from 'react'
 import { graphql, Link } from 'gatsby'
 import { RichText } from 'prismic-reactjs'
 import Layout from '../components/layouts' 
-import { Blade, Text, StaffMember, Carousel, Quote } from '../components/slices'
+import { Blade, Text, StaffMember, Carousel, Quote, ParallaxBlade } from '../components/slices'
 
 // Query for the Page content in Prismic
 export const query = graphql`
@@ -110,6 +110,12 @@ const PageSlices = ({ slices }) => {
         case 'quote' : return (
           <div key={ index }>
             { <Quote slice={ slice } /> }
+          </div>
+        )
+
+        case 'page_blade' : return (
+          <div key={ index }>
+            { <ParallaxBlade slice={ slice } /> }
           </div>
         )
 
