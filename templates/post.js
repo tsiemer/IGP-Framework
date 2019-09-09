@@ -32,6 +32,8 @@ query BlogPostQuery($uid: String) {
               label
               primary{
                 quote
+                portrait_author
+                name_of_the_author
               }
             }
             ... on PRISMIC_PostBodyImage_with_caption{

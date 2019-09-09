@@ -21,10 +21,5 @@ body {
 }
 
 .container {
-  max-width: 700px;
-  margin: auto;
-
-  @media (max-width: $max-width-sm) {
-    padding: 0 20px;
-  }
+  margin-top:50px;
 }

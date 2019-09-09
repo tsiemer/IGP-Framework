@@ -2,14 +2,21 @@
     display:flex;
     flex-wrap:wrap;
     flex-direction:row;
-    margin:50px;
+    padding:50px 50px;
 
+
+}
+
+.staff_member_header{
+    padding:150px 50px 0px 50px;
+    font-size:40px;
+    // font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-align:center;
 }
 
 .staff_member{
     flex:1;
     text-align:center;
-    box-shadow:5px 5px 5px #f9f9f9;
     margin:10px;
     padding:30px;
 
@@ -17,8 +24,8 @@
         background-size:cover;
         background-repeat:no-repeat;
         margin:0px auto;
-        width:150px;
-        height:150px;
+        width:200px;
+        height:200px;
         border-radius:50%;
     }
 
@@ -29,6 +36,7 @@
     }
     
     h3{
+        color:$primary_green;
         font-size:15px;
         padding:0px;
         margin:20px 0px 0px 0px;

@@ -3,7 +3,7 @@
 .blade{
     width:100%;
     height:auto;
-    padding: 100px 100px;
+    padding: 200px 100px;
     margin:0px;
     
     display:flex;
@@ -14,46 +14,54 @@
     &.orange{
         background-color: $primary_orange;
 
-        p{
-            color:black;
+        p, h2, h3{
+            color:white;
         }
     }
     
     &.red{
         background-color: $primary_red;
 
-        p{
+        p, h2, h3{
             color:white;
         }
     }
 
     &.purple{
         background-color: $primary_purple;
-        p{
+        p, h2, h3{
             color:white;
         }
     }
 
     &.green{
         background-color: $primary_green;
-        p{
+        p, h2, h3{
             color:white;
         }
     }
     
     &.navygreen{
         background-color: $primary_navy;
-        color:white;
+        p, h2, h3{
+            color:white;
+        }
     }
     
     &.white{
         background-color: $primary_white;
-        color:black;
+        p, h2{
+            color:black;
+        }
     }
     
     &.blue{
         background-color: $primary_blue;
         color:white;
+    }
+
+    &.cardView{
+        flex-direction:column;
     }
 
     .featured_image{
@@ -71,7 +79,6 @@
         }
 
         h2{
-            color:$blade_header_color;
             font-size:40px;
             font-weight:bold;
         }
@@ -89,7 +96,6 @@
     height:100px;
     position:absolute;
     left:0px;
-    // background: linear-gradient(to right bottom, #823A9C 49%, #fff 50%),    linear-gradient(-50deg, transparent 16px, #000 0);
 
     &.orange{
         background: linear-gradient(to right bottom, $primary_orange 49%, transparent 50%),    linear-gradient(-50deg, transparent 16px, transparent 0);
@@ -125,12 +131,11 @@
 }
 
 .skew-c{
-    // margin:50px 0px;
     width:100%;
     height:100px;
     position:absolute;
     left:0px;
-    // background: linear-gradient(to right bottom, #823A9C 49%, #fff 50%),    linear-gradient(-50deg, transparent 16px, #000 0);
+
 
     &.orange{
         background: linear-gradient(to right bottom, transparent 49%, $primary_orange 50%),    linear-gradient(-50deg, transparent 16px, transparent 0);
@@ -164,8 +169,6 @@
         color:white;
     }
 }
-
-
 
 .cta_button {
     color:white;
@@ -236,4 +239,187 @@
     &.blue{
         color:$primary_blue;
     }
+}
+
+
+.Homepage-Heading{
+    height:500px;
+    width:100vw;
+    background-repeat:no-repeat;
+    background-size:cover;
+    background-position:center;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content: center;
+
+    p, h1, h2, h3, h4 {
+        color:white;
+        text-align:center;
+    }
+}
+
+.cards{
+    display:flex;
+    flex-wrap:wrap;
+    width:75vw;
+    margin:0px auto;
+}
+
+.card{
+    max-width:250px;
+    background-color:pink;
+    padding:20px;
+    margin:10px;
+    text-align:center;
+    font-weight:bold;
+    color:black;
+}
+
+
+
+.parallax-blade{
+    padding:0px 0px;
+    height:800px;
+    display:flex;
+
+
+    .content-container{
+        min-width:500px;
+        padding:0px;
+        text-align:center;
+    }
+
+    .bubble{
+        box-shadow:0 8px 17px 0 rgba(0,0,0,0.14), 0 6px 20px 0 rgba(0,0,0,0.133);
+        border-radius: 100%;
+        position:relative;
+        background:#fff no-repeat center center;
+        z-index:930;
+    
+        img{
+            border-radius: 50%;
+        }
+
+    
+        &.sizeFour{
+            display:flex;
+            align-items:center;
+            justify-content: center;
+            padding:20px;
+
+
+            img{
+                height:77px;
+                width:77px;
+            }
+        }
+        
+        &.sizeTwo{
+            padding:20px;
+            display:flex;
+            align-items:center;
+            justify-content: center;
+
+            img{
+                height:100px;
+                width:100px;
+            }
+        }
+        
+        &.sizeOne{
+            padding:30px;
+            display:flex;
+            align-items:center;
+            justify-content: center;
+
+            img{
+                height:120px;
+                width:120px;    
+            }
+        }
+    
+        &.sizeThree{
+            display:flex;
+            align-items:center;
+            justify-content: center;
+            padding:10px;
+
+            img{
+                height:43px;
+                width:43px;
+            }
+        }
+    
+    
+        &.one{ // Top Left Big Bubble
+            top:-250px;
+            left: calc(53% - 28.88889vw);
+    
+        }
+
+        &.two{ // Bottom left big Bubble
+            top:400px;
+            left:-200px;
+    
+        }
+
+        &.three{ // Top Left Small Bubble
+            top:-330px;
+            left:380px;
+        }
+
+
+        &.four{ // Top Right Small Bubble
+            top:-280px;
+            left:-50px;
+        }
+
+
+        &.five{ // Middle Left medium Bubble
+            top:-50px;
+            left:-10px;
+        }
+
+        &.six{ // Top Middle Medium Bubble
+            top:-320px;
+            left:-150px;
+        }
+
+        &.seven{ // Middle Bottom Small Bubble
+            top:120px;
+            left:-200px;
+        }
+
+        &.eight{ // Bottom Left Small Bubble
+            top:300px;
+            left:-100px;
+        }
+
+        &.nine{ // Bottom Middle SM/MD Bubble
+            top:300px;
+            left:-100px;
+        }
+
+        &.ten{ // Left Middle Medium bubble
+            top:100px;
+            left:-300px;
+        }
+
+        &.eleven{
+            top:450px;
+            left:80px;
+        }
+
+        &.twelve{
+            top:-180px;
+            left:280px;
+        }
+
+        &.thirteen{
+            top:100px;
+            left:-200px;
+        }
+    }
+    
 }

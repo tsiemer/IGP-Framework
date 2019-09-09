@@ -49,8 +49,6 @@ const Layout = ( props ) => {
     window.prismic.setupEditButton()
   }
 
-  console.log("This is the navigation props and data:", props.data)
-
 	return(
     <Fragment>
       <Helmet>

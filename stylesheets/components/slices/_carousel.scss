@@ -1,0 +1,70 @@
+.carousel-container{
+    padding:50px;
+    height:670px;
+    text-align:center;
+    display:flex;
+    justify-content: center;
+    flex-direction:column;
+    
+    &.blue{
+        background-color:$primary_blue;
+        
+        .carousel-header{
+            color:white;
+        }
+    }
+
+    &.yellow{
+        background-color:$primary_yellow;
+        
+        .carousel-header{
+            color:white;
+        }
+    }
+
+    &.green{
+        background-color:$primary_green;
+        
+        .carousel-header{
+            color:white;
+        }
+    }
+
+    &.grey{
+        background-color:$primary_grey;
+        
+        .carousel-header{
+            color:white;
+        }
+    }
+
+
+    .carousel-header{
+        font-size:40px;
+    }
+
+    .Carousel {
+        max-width:85vw;
+        margin:0px auto;
+    
+        .carousel_image {
+            height:200px;
+        }
+    
+        .carousel_item{
+            background-color:white;
+            text-align:center;
+            width:300px;
+            min-height:350px;
+            padding:20px;
+        }
+    }
+}
+
+li.react-multi-carousel-item.react-multi-carousel-item--active{
+    max-width:300px;
+}
+
+li.react-multi-carousel-item {
+    max-width:300px;
+}
